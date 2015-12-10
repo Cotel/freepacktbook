@@ -2,27 +2,17 @@ freepacktbook
 =============
 
 Claim Your `Free PacktPub eBook <https://www.packtpub.com/packt/offers/free-learning>`_ automatically.
+Fork from `https://github.com/bogdal/freepacktbook <https://github.com/bogdal/freepacktbook>`_.
 
 .. code-block:: bash
 
-  $ pip install freepacktbook
+  $ python setup.py install
 
-  $ export PACKTPUB_EMAIL=my@email.com
-  $ export PACKTPUB_PASSWORD=my_password
-  
   $ claim_free_ebook
 
+Changes
+-------
 
-Notifications (optional)
-------------------------
-
-``Slack`` **integration**
-
-Set additionally the following environment variables:
-
-.. code-block:: bash
-
-  export SLACK_URL=https://hooks.slack.com/services/...
-  export SLACK_CHANNEL=#random
-
-.. image:: https://github-bogdal.s3.amazonaws.com/freepacktbook/slack.png
+- Added input for terminal so you don't have to store your email and password as a environment variable.
+- Password input doesn't echo when you write it for obvious security reasons.
+- The program shows a little description of the book.

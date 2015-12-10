@@ -53,6 +53,6 @@ def claim_free_ebook():
     book = client.claim_free_ebook()
     print "\nAdded to your collection!"
 
-    slack_notification = SlackNotification(
-        environ.get('SLACK_URL'), environ.get('SLACK_CHANNEL'))
-    slack_notification.notify(book)
+    # slack_notification = SlackNotification(
+    #     environ.get('SLACK_URL'), environ.get('SLACK_CHANNEL'))
+    # slack_notification.notify(book)
