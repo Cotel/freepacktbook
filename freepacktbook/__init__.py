@@ -3,6 +3,7 @@ from os import environ
 from bs4 import BeautifulSoup
 import requests
 import getpass
+import sys, codecs
 
 from .slack import SlackNotification
 
@@ -43,6 +44,9 @@ class FreePacktBook(object):
 
 
 def claim_free_ebook():
+    reload(sys)
+    sys.setdefaultencoding('utf-8') # UTF-8 output for Windows
+    
     print "Login into www.packtpub.com\n"
     user = raw_input("Email: ")
     passwd = getpass.getpass("Password: ")
